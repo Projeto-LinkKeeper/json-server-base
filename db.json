@@ -4,64 +4,41 @@
       "email": "kenzinho@mail.com",
       "password": "$2a$10$YQiiz0ANVwIgpOjYXPxc0O9H2XeX3m8OoY1xk7OGgxTnOJnsZU7FO",
       "name": "Kenzinho",
-      "age": 38,
       "id": 1
     },
     {
-      "email": "tsunode@mail.com",
-      "password": "$2a$10$tcuyAKblnOCch4P1yqeiG.0NogGy5OVsfFwBGPS5mfiCo2W8ZySn2",
-      "name": "tsunode",
+      "email": "natalia@mail.com",
+      "password": "$2a$10$Yco.HbTrapIehMibrg0SiuYaAVEd01hmKiCAJfvsMAUFNXKFizn1.",
+      "name": "Natalia",
       "id": 2
     }
   ],
-  "books": [
+  "login": [
+    {
+      "email": "kenzinho@mail.com",
+      "password": "123456"
+    }
+  ],
+  "links": [
     {
       "id": 1,
-      "name": "Livro 1"
+      "title": "Livro 1",
+      "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      "comments": "This is a comment",
+      "userId": 1
     },
     {
+      "title": "Livro 7",
+      "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      "comments": "This is a comment",
       "id": 2,
-      "name": "Livro 2"
+      "userId": 2
     },
     {
-      "id": 3,
-      "name": "Livro 3"
-    }
-  ],
-  "posts": [
-    {
-      "text": "Meu novo post",
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "text": "Meu novo blog",
-      "userId": 1,
+      "title": "Livro 8",
+      "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      "comments": "This is a comment",
       "id": 3
-    },
-    {
-      "text": "bla bla bla",
-      "userId": 2,
-      "id": 4
-    },
-    {
-      "text": "demo de hoje foi sobre",
-      "userId": 1,
-      "id": 5
-    }
-  ],
-  "comments": [
-    {
-      "text": "maneiro esse post",
-      "postId": 3,
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "text": "maneiro esse post",
-      "postId": 3,
-      "userId": 1,
-      "id": 2
     }
   ]
 }
