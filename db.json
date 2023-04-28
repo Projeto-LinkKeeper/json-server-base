@@ -18,12 +18,14 @@
     {
       "id": 1,
       "title": "Livro 1",
+      "link": "https://kenzie.com.br/curriculo",
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
       "userId": 1
     },
     {
       "title": "Livro 7",
+      "link": "https://kenzie.com.br/quem-somos",
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
       "id": 2,
@@ -31,6 +33,7 @@
     },
     {
       "title": "Livro 8",
+      "link": "https://kenzie.com.br",
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
       "id": 3
