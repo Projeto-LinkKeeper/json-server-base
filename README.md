@@ -1,24 +1,127 @@
-# json-server-base
+# LinkKeeper
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Projetos Front-end.
+Esse é o backend da aplicação LinkKeeper - O objetivo dessa aplciação é servir de repositório para todos aqueles links que o usuário deseja salvar, mas que não são tão importantes que mereçam estar na barra do navegador. Além disso, o usuário pode acessar tais links em qualquer lugar, bastando estar logado.
 
 ## Endpoints
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+A API tem um total de 2 endpoints, podendo cadastrar um usuário, realizar um login e criar novos links. 
+A url base da API é: https://json-server-base-7f5f.onrender.com
 
-### Cadastro
-
-POST /register <br/>
-POST /signup <br/>
-POST /users
-
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
-
-
-### Login
-
-POST /login <br/>
-POST /signin
-
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+## Criação de Usuário
+````````
+POST /users - FORMATO DA REQUISIÇÃO
+````````
+````````
+{
+  "email": "johndoe@email.com",
+  "password": "123456",
+  "name": "John Doe",
+}
+````````
+Caso a requisição dê certo, a resposta será da seguinte maneira:
+````````
+POST /users - FORMATO DA RESPOSTA - STATUS 201
+````````
+````````
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hdGFsaWFAbWFpbC5jb20iLCJpYXQiOjE2ODI2MjMwODcsImV4cCI6MTY4MjYyNjY4Nywic3ViIjoiMiJ9.iB2WB7BjDWcd5PmSZ1C1fZsfNbtJbJi4cY_D_lwWBU",
+	"user": {
+		"email": "johndoe@mail.com",
+		"name": "John Doe",
+		"id": 2
+	}
+}
+````````
+### POSSÍVEIS ERROS
+Caso você acabe enviando algum campo errado, a resposta a esse erro será:
+A senha necessita de 6 caracteres.
+````
+POST /users - FORMATO DA RESPOSTA - STATUS 400
+````
+````
+"Password is too short"
+````
+## Login
+````
+POST /login - FORMATO DA REQUISIÇÃO
+````
+````
+{
+  "email": "johndoe@email.com",
+  "password": "123456"
+}
+````
+Caso a requisição funcione, a resposta será a seguinte:
+````
+POST /login - FORMATO DA RESPOSTA 
+````
+````
+{
+	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbnppbmhvQG1haWwuY29tIiwiaWF0IjoxNjgyNzExMDkzLCJleHAiOjE2ODI3MTQ2OTMsInN1YiI6IjEifQ.QdkfnlXsEVQ6Pm6FzWVmU3Mo1GDeDxDJ_VTxoFDlXqo",
+	"user": {
+		"email": "johndoe@mail.com",
+		"name": "John Doe",
+		"id": 1
+	}
+}
+````
+### Rotas que necessitam de autorização 
+Essas rotas devem ter o token informado no cabeçalho (header) da requisição, no campo "Authorization", dessa maneira:
+>Authorization: Bearer {token}
+## Autologin
+````
+GET /users/:userId
+````
+````
+{
+	"email": "johndoe@mail.com",
+	"password": "$2a$10$dR.mXf7404Po4lU1tFW6hesgFBPHURSNaMEbRLpX3eGNwUnBBL9.q",
+	"name": "John Doe",
+	"id": 1
+}
+````
+## Links
+### Rota para buscar todos os links da API
+Não é necessário um corpo para essa requisição 
+````
+GET /links - FORMATO DA RESPOSTA - STATUS 200
+````
+````
+[
+	{
+		"id": 1,
+		"title": "Link 1",
+		"img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+		"comments": "This is a comment",
+		"userId": 1
+	},
+	{
+		"title": "Link 1",
+		"img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+		"comments": "This is a comment",
+		"id": 2,
+		"userId": 2
+	},
+	{
+		"title": "Link 3",
+		"img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+		"comments": "This is a comment",
+		"id": 3
+	}
+]
+````
+### Rota para a criação de um novo link
+````
+POST /links - FORMATO DA REQUISIÇÃO
+ ````
+````
+{
+  "title": "Livro 8",
+  "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+  "comments": "This is a comment"
+}
+````
+### Rota para deletar um link
+Não é necessário corpo de requisição 
+````
+DELETE /link/id

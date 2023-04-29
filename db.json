@@ -11,9 +11,14 @@
       "password": "$2a$10$Yco.HbTrapIehMibrg0SiuYaAVEd01hmKiCAJfvsMAUFNXKFizn1.",
       "name": "Natalia",
       "id": 2
+    },
+    {
+      "email": "teste@mail.com",
+      "password": "$2a$10$dR.mXf7404Po4lU1tFW6hesgFBPHURSNaMEbRLpX3eGNwUnBBL9.q",
+      "name": "Teste",
+      "id": 3
     }
   ],
-
   "links": [
     {
       "id": 1,
