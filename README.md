@@ -4,7 +4,7 @@ Esse é o backend da aplicação LinkKeeper - O objetivo dessa aplciação é se
 
 ## Endpoints
 
-A API tem um total de 2 endpoints, podendo cadastrar um usuário, realizar um login e criar novos links. 
+A API tem um total de 3 endpoints, podendo cadastrar um usuário, realizar um login e criar novos links. 
 A url base da API é: https://json-server-base-7f5f.onrender.com
 
 ## Criação de Usuário
@@ -125,3 +125,26 @@ POST /links - FORMATO DA REQUISIÇÃO
 Não é necessário corpo de requisição 
 ````
 DELETE /link/id
+````
+### Rota para acessar um link através da categoria
+Não é necessário corpo de requisição
+````
+GET links?category={category}
+````
+## Categories
+### Rotas para buscar todas as categorias na API
+````
+GET /categories
+````
+### Rota para criar uma nova categoria
+````
+POST /categories
+````
+````
+    {
+      "name": "Música",
+      "userId": 4,
+      "id": 6
+    }
+````
+
