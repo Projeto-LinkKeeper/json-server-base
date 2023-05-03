@@ -17,6 +17,12 @@
       "password": "$2a$10$dR.mXf7404Po4lU1tFW6hesgFBPHURSNaMEbRLpX3eGNwUnBBL9.q",
       "name": "Teste",
       "id": 3
+    },
+    {
+      "email": "dog@mail.com",
+      "password": "$2a$10$EMiMTX70bxHKzDu7iEskJ.Z/domzAHYPxvSxnf6c4ntKnVwI0Pikm",
+      "name": "Dog",
+      "id": 4
     }
   ],
   "links": [
@@ -26,7 +32,8 @@
       "link": "https://kenzie.com.br/curriculo",
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
-      "userId": 1
+      "userId": 4,
+      "categories": "books"
     },
     {
       "title": "Livro 7",
@@ -34,14 +41,36 @@
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
       "id": 2,
-      "userId": 2
+      "userId": 4,
+      "category": "video"
     },
     {
       "title": "Livro 8",
       "link": "https://kenzie.com.br",
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
-      "id": 3
+      "id": 3,
+      "category": "series"
+    }
+  ],
+  "categories": [
+    {
+      "name": "books"
+    },
+    {
+      "name": "video"
+    }, 
+    {
+      "name": "music"
+    },
+    {
+      "name": "series"
+    },
+    {
+      "name": "recipies"
+    },
+    {
+      "name": "others"
     }
   ]
 }
