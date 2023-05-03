@@ -33,7 +33,7 @@
       "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
       "comments": "This is a comment",
       "userId": 4,
-      "categories": "books"
+      "category": "books"
     },
     {
       "title": "Livro 7",
@@ -51,26 +51,56 @@
       "comments": "This is a comment",
       "id": 3,
       "category": "series"
+    },
+    {
+      "title": "Livro 10",
+      "link": "https://kenzie.com.br/curriculo",
+      "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      "comments": "This is a comment",
+      "userId": 4,
+      "category": "books",
+      "id": 4
+    },
+    {
+      "title": "Livro 10",
+      "link": "https://kenzie.com.br/curriculo",
+      "img": "https://kenzie.com.br/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75",
+      "comments": "This is a comment",
+      "userId": 4,
+      "category": "books",
+      "id": 5
     }
   ],
   "categories": [
     {
-      "name": "books"
+      "name": "Livros",
+      "userId": 1,
+      "id": 1
     },
     {
-      "name": "video"
-    }, 
-    {
-      "name": "music"
+      "name": "Música",
+      "userId": 4,
+      "id": 2
     },
     {
-      "name": "series"
+      "name": "Filme",
+      "userId": 4,
+      "id": 3
     },
     {
-      "name": "recipies"
+      "name": "Música",
+      "userId": 4,
+      "id": 4
     },
     {
-      "name": "others"
+      "name": "Séries",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "name": "Música",
+      "userId": 4,
+      "id": 6
     }
   ]
 }
